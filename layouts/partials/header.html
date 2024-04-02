@@ -1,4 +1,8 @@
-<a href="{{ "" | relURL }}" class="title">
-  <h2>{{ .Site.Title }}</h2>
-</a>
+<h2> 
+    <a href="{{ "" | relURL }}" class="title"> {{ .Site.Title }} </a>
+    {{ with .Site.Params.emailLink }}    <a href="{{ . }}" style="text-decoration: none; width: 1.2em;" class="fas fa-at"></a> {{ end }}
+    {{ with .Site.Params.linkedinLink }} <a href="{{ . }}" style="text-decoration: none; width: 1.2em;" class="fa fa-linkedin"></a> {{ end }}
+    {{ with .Site.Params.githubLink }}   <a href="{{ . }}" style="text-decoration: none; width: 1.2em;" class="fa fa-github"></a>  {{ end }} 
+    {{ with .Site.Params.resumeLink }}   <a href="{{ . }}" style="text-decoration: none; width: 1.2em;" class="far fa-file-pdf"></a> {{ end }}
+</h2>
 <nav>{{- partial "nav.html" . -}}</nav>
