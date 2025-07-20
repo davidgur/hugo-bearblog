@@ -1,11 +1,13 @@
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
   :root {
     --width: 720px;
-    --font-main: Verdana, sans-serif;
-    --font-secondary: Verdana, sans-serif;
+    --font-main: "Work Sans", sans-serif;
+    --font-secondary: "Work Sans", sans-serif;
     --font-scale: 1em;
-    --background-color: #fff;
-    --heading-color: #222;
+    --background-color: #eeeeee;
+    --heading-color: #444;
     --text-color: #444;
     --link-color: #3273dc;
     --visited-color: #8b6fcb;
@@ -16,7 +18,7 @@
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --background-color: #01242e;
+      --background-color: #444;
       --heading-color: #eee;
       --text-color: #ddd;
       --link-color: #8cc2dd;
@@ -50,7 +52,9 @@
   h5,
   h6 {
     font-family: var(--font-main);
+    //font-family: Verdana, sans-serif;
     color: var(--heading-color);
+    font-weight: 500;
   }
 
   code.has-jax {font: inherit;
