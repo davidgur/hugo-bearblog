@@ -11,7 +11,7 @@
     <li>
       <span>
         <i>
-          <time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
+          <time datetime='{{ .Date.Format "2006-01-02" }}'>
             {{ .Date.Format (default "02 Jan, 2006" .Site.Params.dateFormat) }}
           </time>
         </i>
@@ -24,15 +24,14 @@
     </li>
     {{ end }}
   </ul>
-  {{ if .Data.Singular }}
-  {{else}}
-    <small>
-      <div>
-        {{ range .Site.Taxonomies.tags }}
-        <a href="{{ .Page.Permalink }}">#{{ .Page.Title }}</a>&nbsp;
-        {{ end }}
-      </div>
-    </small>
-    {{ end }}
+  {{ if not .Data.Singular }}
+  <small>
+    <div>
+      {{ range .Site.Taxonomies.tags }}
+      <a href="{{ .Page.Permalink }}">#{{ .Page.Title }}</a>&nbsp;
+      {{ end }}
+    </div>
+  </small>
+  {{ end }}
 </content>
 {{ end }}
